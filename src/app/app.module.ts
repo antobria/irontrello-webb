@@ -14,6 +14,8 @@ import { TodoComponent } from './components/todo/todo.component';
 import { WorkInProgressComponent } from './components/work-in-progress/work-in-progress.component';
 import { DoneComponent } from './components/done/done.component';
 import { FormsModule } from '@angular/forms';
+import { CreateComponent } from './components/cards/create/create.component';
+import { CardService } from './shared/services/card.service';
 
 
 
@@ -26,7 +28,8 @@ import { FormsModule } from '@angular/forms';
     ModalComponent,
     TodoComponent,
     WorkInProgressComponent,
-    DoneComponent
+    DoneComponent,
+    CreateComponent
   ],
   imports: [
     NgbModule.forRoot(),
@@ -34,7 +37,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     HttpModule
   ],
-  providers: [SessionService, HttpModule],
+  providers: [SessionService, CardService, HttpModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
