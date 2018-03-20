@@ -3,5 +3,5 @@ export class Card {
   description: string;
   position: Number;
   due_date: Date;
-  list: string;
+  list: string = 'ToDo';
 }

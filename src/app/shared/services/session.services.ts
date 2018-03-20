@@ -31,16 +31,15 @@ export class SessionService {
     return Observable.throw(e.json().message);
   }
 
- signup(user) {
+ signup(user: User) {
     return this.http.post(`${SessionService.BASE_API}/signup`, JSON.stringify(user), SessionService.defaultOptions)
       .map(res => res.json())
       .catch(this.handleError);
   }
 
- login(user) {
+ login(user: User) {
    // tslint:disable-next-line:no-debugger
-   debugger;
-    return this.http.post(`${SessionService.BASE_API}/session/`, user)
+    return this.http.post(`${SessionService.BASE_API}/session/`, JSON.stringify(user),  SessionService.defaultOptions)
       .map(res => res.json())
       .catch(this.handleError);
   }

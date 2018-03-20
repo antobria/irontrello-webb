@@ -10,12 +10,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { BoardComponent } from './components/board/board.component';
 import { LoginComponent } from './components/login/login.component';
 import { ModalComponent } from './components/modal/modal.component';
-import { TodoComponent } from './components/todo/todo.component';
 import { WorkInProgressComponent } from './components/work-in-progress/work-in-progress.component';
-import { DoneComponent } from './components/done/done.component';
 import { FormsModule } from '@angular/forms';
 import { CreateComponent } from './components/cards/create/create.component';
 import { CardService } from './shared/services/card.service';
+import { ListComponent } from './components/list/list.component';
+import { CardComponent } from './components/cards/card/card.component';
 
 
 
@@ -26,10 +26,10 @@ import { CardService } from './shared/services/card.service';
     BoardComponent,
     LoginComponent,
     ModalComponent,
-    TodoComponent,
     WorkInProgressComponent,
-    DoneComponent,
-    CreateComponent
+    CreateComponent,
+    ListComponent,
+    CardComponent
   ],
   imports: [
     NgbModule.forRoot(),

@@ -19,10 +19,16 @@ export class CardService {
   handleError(e) {
     return Observable.throw(e.json().message);
   }
-  create(card) {
+  create(card: Card) {
     return this.http.post(`${CardService.BASE_API}/cards/`, JSON.stringify(card), CardService.defaultOptions)
       .map(res => res.json())
       .catch(this.handleError);
+  }
+
+  list() {
+    return this.http.get(`${CardService.BASE_API}/cards/`, CardService.defaultOptions)
+    .map(res => res.json())
+    .catch(this.handleError);
   }
 
 }
